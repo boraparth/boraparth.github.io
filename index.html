@@ -10,10 +10,16 @@
 <script>
 function startTime()
 {
-  var time = new Date();
-  document.getElementById('txt').innerHTML =time.getDate() + "-" + time.getMonth()<9?"0":"" + (time.getMonth()+1) + "-" + time.getFullYear() + "<br>" + 
-  (time.getHours()%12?time.getHours()%12:12) + ":" + (time.getMinutes()<10?"0":"") + time.getMinutes() + ":" + (time.getSeconds()<10?"0":"") + time.getSeconds() + (time.getHours()<=12?"AM":"PM");
-  var t = setTimeout(startTime, 1000);
+  var t = new Date();
+  document.getElementById('txt').innerHTML=
+  (t.getDate()<9?"0":"") + t.getDate() + "-" +   
+  (t.getMonth()<9?"0":"") + (t.getMonth()+1) + "-" + 
+  t.getFullYear() + "<br>" + 
+  (t.getHours()%12?t.getHours()%12:12) + ":" + 
+  (t.getMinutes()<10?"0":"") + t.getMinutes() + ":" + 
+  (t.getSeconds()<10?"0":"") + t.getSeconds() + 
+  (t.getHours()<=12?"AM":"PM");
+  setTimeout(startTime, 1000);
 }
 </script>
 </head>
