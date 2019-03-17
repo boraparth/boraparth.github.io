@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>pARTHa</title>
+    <base href="assets/">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="icons/favicon.png" rel="icon" type="image/png" sizes="32x32">
+<script>
+function startTime()
+{
+  var time = new Date();
+  document.getElementById('txt').innerHTML =time.getDate() + "-" + time.getMonth()<9?"0":"" + (time.getMonth()+1) + "-" + time.getFullYear() + "<br>" + 
+  (time.getHours()%12?time.getHours()%12:12) + ":" + (time.getMinutes()<10?"0":"") + time.getMinutes() + ":" + (time.getSeconds()<10?"0":"") + time.getSeconds() + (time.getHours()<=12?"AM":"PM");
+  var t = setTimeout(startTime, 1000);
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+</body>
+</html>
