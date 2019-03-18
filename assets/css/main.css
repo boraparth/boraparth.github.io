@@ -8,6 +8,7 @@ body
 {
  background-image: url("../images/bgimage.jpg");
  background-color: #cccccc;
+  height:80%;
 }
 
 img.sticky
