@@ -11,7 +11,7 @@
 function startTime()
 {
   var t = new Date();
-  document.getElementById('txt').innerHTML=
+  document.getElementById('header').innerHTML=
   (t.getDate()<9?"0":"") + t.getDate() + "-" +   
   (t.getMonth()<9?"0":"") + (t.getMonth()+1) + "-" + 
   t.getFullYear() + "<br>" + 
@@ -26,7 +26,7 @@ function startTime()
 
 <body onload="startTime()">
 
-<div id="txt"></div>
+<div id="header"></div>
 
 </body>
 </html>
